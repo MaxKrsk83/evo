@@ -29,7 +29,7 @@ public class FiscalAcc{
         try {
             ret.addAll(getData(commands.FN_SERIAL_NUMBER,new String[0]).getArrStruct());
         } catch (FiscalAccException e) {
-            e.printStackTrace();
+            ret.add( new Struct("Ошибка", e.getMessage()));
         }
         return ret;
     }
@@ -76,7 +76,7 @@ public class FiscalAcc{
                 writeToPort(dataFN.getDataToArrInt());
             }
         } catch (SerialPortException e) {
-            return null;// FiscalAccException("Не удалось открыть порт: ");
+            throw new FiscalAccException(new Struct("Ошибка",e.getMessage()).toString());// FiscalAccException("Не удалось открыть порт: ");
         }
         currentTask=commands.FN_NONE;
         return data;

@@ -1,5 +1,6 @@
 import com.google.gson.Gson;
-import ru.itgroup.evo.fn.*;
+import ru.itgroup.evo.fn.FiscalAccException;
+import ru.itgroup.evo.fn.Struct;
 import ru.itgroup.evo.jsonclass.CommandFN;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class Test {
 //                "\t\"num_teg\":\"1017\"" +
 //                "}";
 //        CommandFN t = new Gson().fromJson(r,CommandFN.class);
-        ArrayList<Struct> ret =  t.createCorrectionCheck();
+        ArrayList<Struct> ret =  t.getListFN();
         System.out.println(ret);
 //        Struct [] param = new Struct[1];
 //            Struct [] tov1 = new Struct[3];

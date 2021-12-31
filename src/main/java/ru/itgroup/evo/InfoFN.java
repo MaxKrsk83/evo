@@ -1,9 +1,8 @@
 package ru.itgroup.evo;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import ru.itgroup.evo.fn.Struct;
-import ru.itgroup.evo.jsonclass.*;
+import ru.itgroup.evo.jsonclass.CommandFN;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

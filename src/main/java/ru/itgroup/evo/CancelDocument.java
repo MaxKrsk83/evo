@@ -3,7 +3,7 @@ package ru.itgroup.evo;
 import com.google.gson.Gson;
 import ru.itgroup.evo.fn.FiscalAccException;
 import ru.itgroup.evo.fn.Struct;
-import ru.itgroup.evo.jsonclass.*;
+import ru.itgroup.evo.jsonclass.CommandFN;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
